@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>niss</title>
+
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background: #0a0a0a;
+      font-family: "Georgia", "Times New Roman", serif;
+      color: #ccc;
+      overflow: hidden;
+    }
+
+    /* Subtle grain/noise effect using gradients */
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background:
+        repeating-linear-gradient(
+          0deg,
+          rgba(255,255,255,0.02) 0px,
+          rgba(255,255,255,0.02) 1px,
+          transparent 1px,
+          transparent 2px
+        ),
+        repeating-linear-gradient(
+          90deg,
+          rgba(255,255,255,0.015) 0px,
+          rgba(255,255,255,0.015) 1px,
+          transparent 1px,
+          transparent 2px
+        );
+      pointer-events: none;
+    }
+
+    .container {
+      position: relative;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding-top: 20vh; /* top third */
+      text-align: center;
+    }
+
+    .text {
+      font-size: 20px;
+      letter-spacing: 1px;
+      color: #bfbfbf;
+      opacity: 0.9;
+    }
+
+    /* Optional subtle fade-in */
+    .text {
+      animation: fadeIn 1.5s ease forwards;
+      opacity: 0;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 0.9;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="text">[ website in the making ]</div>
+  </div>
+</body>
+</html>
